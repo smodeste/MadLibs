@@ -2,7 +2,53 @@
   <body>
     <h1>MadLibs</h1>
     <script>
-      alert("Hello");
+     // LIBRARY
+function makeSentance(sentanceType,noun,name,verb,number)
+{
+  var capitalName = name[0].toUpperCase() + name.substring(1); 
+  var timeVariable = "times";
+  if(number==1)
+  {
+    timeVariable = "time";
+  } 
+  if(sentanceType==1)
+  {
+    return capitalName + " " + verb + " the " + noun + " " + number + " " + timeVariable +". "; 
+  }
+  else if(sentanceType==2)
+  {
+    return capitalName + ''  + verb + 'the' + noun + ' ' + number + ' ' + timeVariable + '!';
+  }
+  else if(sentanceType==3)
+  {
+    return "The " + number + " " +noun+ " were " + verb + " by " + capitalName + ".";
+  } 
+  else if(sentanceType==4)
+  {
+    return noun + " is awesome!";
+  }
+  else if(sentanceType=5)
+  {
+    return name+ " has " + name.length + " characters.";
+  }
+  else
+  {
+    return "ERROR!";
+  }
+}
+
+// INPUT
+var noun = prompt("Enter a noun");
+var name = prompt("Enter a person name");
+var verb = prompt("Enter a verb");
+var number =prompt("Enter a number");
+
+// MANIMPULATION
+for(i=1; i<6; i++)
+{
+  var sentance = makeSentance(i,noun,name,verb,number);
+  alert(i + ") " + sentance);
+}
     </script>
   </body>
 </html>
