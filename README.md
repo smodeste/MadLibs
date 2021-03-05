@@ -1,3 +1,3 @@
 # MadLibs
 Word Game
-[https://smodeste.github.io/MadLibs/]
+https://smodeste.github.io/MadLibs/
